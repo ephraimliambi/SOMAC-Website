@@ -1,0 +1,1 @@
+# Put clinic images here

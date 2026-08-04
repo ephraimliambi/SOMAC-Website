@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">         <!-- Character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">         <!-- Ensures proper scaling on different devices -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">         <!-- Ensures compatibility with Internet Explorer --> 
+  <title>Modern Clinic</title>
+  <link rel="stylesheet" href="css/style.css">          <!-- Link to the external CSS file for styling -->
+</head>
+<body>
+<header>
+  <nav class="navbar">             <!-- Navigation bar with a logo and links -->
+    <a href="#" class="navbar__logo"> Modern Clinic SOMAC</a>
+
+    <ul class="navbar__links" id="navbar-links">
+      <li><a href="#home">Home</a></li>                         <!-- Navigation links to different sections of the page -->
+      <li><a href="#services">Services</a></li>
+      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button                         
+      class="navbar__toggle"                
+      id="navbar-toggle"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">        <!-- Hero section with a background image and overlay -->
+  <div class="hero-content">
+    <h1>Modern Clinic SOMAC</h1>
+    <p class="hero-tagline">Taking action to prevent, relieve and cure</p>
+    <p class="hero-description">Quality medical care for rural communities in DRC and Central Africa</p><br>
+
+    <div class="hero-buttons">
+      <a href="#appointment" class="btn btn-primary">Book Appointment</a>|
+      <a href="#contact" class="btn btn-secondary">Contact Us</a><br> <br>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SERVICES SECTION -->
+<section class="services" id="services">                 <!-- Services section with a grid layout for different services offered -->
+  <h1>Our Services</h1>
+  <h3>Comprehensive healthcare for our community</h3><br>
+
+  <div class="service-grid">
+    
+    <div class="service-card">
+      <h4>General Consultation</h4>
+      <p>Consultation générale / Primary care and health checkups.</p><br>
+    </div>
+
+    <div class="service-card">
+      <h4>Maternal & Child Care</h4>
+      <p>Soins maternels et infantiles / Prenatal, delivery, and pediatric care.</p><br>
+    </div>
+
+    <div class="service-card">
+      <h4>Lab & Pharmacy</h4>
+      <p>Laboratoire et Pharmacie / Diagnostics, tests, and medication.</p><br>
+    </div>
+
+  </div>
+</section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
