@@ -100,3 +100,43 @@
   position: relative;
   z-index: 2;
 }
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border: 2px solid var(--color-primary);
+}
+.btn-primary:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+  border-color: color-mix(in srgb, var(--color-primary) 85%, black);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-light);
+  border: 2px solid var(--color-light);
+}
+.btn-secondary:hover {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+.btn:focus-visible {
+  outline: 3px solid var(--color-light);
+  outline-offset: 2px;
+}
