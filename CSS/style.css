@@ -43,24 +43,25 @@ img {
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* logo left, links/button right */
-  align-items: center;            /* vertically centers everything */
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--color-light);
+  background-color: var(--color-bg);
   position: sticky;
   top: 0;
+  z-index: 100; /* keeps navbar above other content when scrolling */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   font-family: var(--font-main);
 }
 
-.navbar__logo {             /* BEM naming convention: Block__Element */
+.navbar__logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--color-primary);
   text-decoration: none;
 }
 
-.navbar__links {       
+.navbar__links {
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -68,12 +69,17 @@ img {
 
 .navbar__links a {
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--color-text);
   font-weight: 500;
+  transition: color 0.2s ease; /* smooth hover effect */
+}
+
+.navbar__links a:hover {
+  color: var(--color-primary);
 }
 
 .navbar__toggle {
-  display: none; /* hidden on desktop */
+  display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -83,14 +89,15 @@ img {
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar__links {
-    display: none; /* hidden until toggled open */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--color-light);
+    background-color: var(--color-bg);
     padding: 1rem 2rem;
+    gap: 1rem;
   }
 
   .navbar__links.active {
