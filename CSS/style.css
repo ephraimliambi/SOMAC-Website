@@ -1,10 +1,13 @@
-:root {                         /*Targeting the root element of the document to define global CSS variables*/
-  --color-primary: #0d6efd;      
-  --color-dark: #1a1a1a;
-  --color-light: #ffffff;
-  --font-main: 'Segoe UI', sans-serif;
-}
-* {
+:root {                               
+  --color-primary: #0d6efd;
+  --color-primary-dark: #0b5ed7;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8fafc;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+}  
+*{                     
   margin: 0;
   padding: 0;
   box-sizing: border-box;
