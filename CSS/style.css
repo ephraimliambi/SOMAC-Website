@@ -10,6 +10,13 @@
   box-sizing: border-box;
 }
 
+*{box-sizing: border-box;}
+
+.site-header {
+  background-color: lightgrey;
+  padding: 1rem 2rem;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between; /* logo left, links/button right */
