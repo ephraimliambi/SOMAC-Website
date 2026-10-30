@@ -1,139 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">         <!-- Character encoding for the document -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">         <!-- Ensures proper scaling on different devices -->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">         <!-- Ensures compatibility with Internet Explorer --> 
-  <title>Modern Clinic</title>
-  <link rel="stylesheet" href="css/style.css">          <!-- Link to the external CSS file for styling -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Clinic SOMAC | Compassionate Healthcare in Gemena</title>
+  <meta name="description" content="Modern Clinic SOMAC in Gemena, DRC: general consultation, maternal and child care, laboratory and pharmacy. Book your appointment today.">
+
+  <!-- Fonts, icons, scroll animations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="./CSS/style.css">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="./JAVASCRIPT/script.js" defer></script>
 </head>
 <body>
-<header>
-  <nav class="navbar">             <!-- Navigation bar with a logo and links -->
-    <a href="#" class="navbar__logo"> Modern Clinic SOMAC</a>
 
-    <ul class="navbar__links" id="navbar-links">
-      <li><a href="#home">Home</a></li>                         <!-- Navigation links to different sections of the page -->
-      <li><a href="#services">Services</a></li>
-      <li><a href="#doctors">Doctors</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <button type="button"                                
-      class="navbar__toggle"                
-      id="navbar-toggle"
-      aria-label="Toggle menu"
-      aria-expanded="false"
-    >
-      ☰
-    </button>
-  </nav>
-</header>
-
-<main>                       <!-- Main content of the page  hero and services section-->
-
-<!-- HERO SECTION -->
-<section class="hero" id="home">        <!-- Hero section with a background image and overlay -->
-  <div class="hero-content">
-    <h1>Modern Clinic SOMAC</h1>
-    <p class="hero-tagline">Taking action to prevent, relieve and cure</p>
-    <p class="hero-description">Quality medical care for rural communities in DRC and Central Africa</p><br>
-
-    <div class="hero-buttons">
-  <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
-  <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-</div>
+  <!-- ===== TOP EMERGENCY BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="tel:+243813621661" class="topbar__emergency">
+        <i class="fa-solid fa-truck-medical"></i>
+        <span data-fr="Urgence">Emergency</span> +243 813 621 661
+      </a>
+      <span class="topbar__item"><i class="fa-regular fa-clock"></i> <span data-fr="Lun-Sam 8h-20h">Mon-Sat 8AM-8PM</span></span>
+      <span class="topbar__item"><i class="fa-solid fa-location-dot"></i> Libenge Moke, Gemena</span>
+    </div>
   </div>
-</section>
 
+  <!-- ===== STICKY HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">
+        <img src="./images/logo.png" alt="Modern Clinic SOMAC">
+      </a>
 
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link" data-fr="Accueil">Home</a></li>
+          <li><a href="#about" class="nav__link" data-fr="À propos">About Us</a></li>
+          <li><a href="#services" class="nav__link" data-fr="Services">Services</a></li>
+          <li><a href="#doctors" class="nav__link" data-fr="Médecins">Doctors</a></li>
+          <li><a href="#contact" class="nav__link" data-fr="Contact">Contact</a></li>
+          <li class="nav__cta-mobile"><a href="#appointment" class="btn btn--teal" data-fr="Prendre rendez-vous">Book Appointment</a></li>
+        </ul>
+      </nav>
 
-<!-- SERVICES SECTION -->
-<section class="services" id="services">                 <!-- Services section with a grid layout for different services offered -->
-  <h2>Our Services</h2>
-  <h3>Comprehensive healthcare for our community</h3><br>
-
-  <div class="service-grid">
-    
-    <div class="service-card">
-      <h4>General Consultation</h4>
-      <p>Consultation générale / Primary care and health checkups.</p><br>
-    </div>
-
-    <div class="service-card">
-      <h4>Maternal & Child Care</h4>
-      <p>Soins maternels et infantiles / Prenatal, delivery, and pediatric care.</p><br>
-    </div>
-
-    <div class="service-card">
-      <h4>Lab & Pharmacy</h4>
-      <p>Laboratoire et Pharmacie / Diagnostics, tests, and medication.</p><br>
-    </div>
-
-  </div>
-</section>
-</main> 
-
-<footer>
-  <div class="footer-container ">
-
-    <!-- Column 1: About-->
-     <div class="footer-about">
-    <h3>Modern Clinic SOMAC</h3>
-    <p>Providing compassionate and quality healthcare services for you and your family.
-      Your health is our priority. 
-      We are committed to improving the well-being of our community through accessible and comprehensive medical care. 
-    </p>
-    </div> 
-    <!--Quick Links-->
-    <div class="footer-links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="doctors.html">Doctors</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="appointment.html">Book Appointment</a></li>
-      </ul> 
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang__btn is-active" data-lang="en">EN</button>
+          <button class="lang__btn" data-lang="fr">FR</button>
+        </div>
+        <a href="#appointment" class="btn btn--teal header__cta" data-fr="Prendre rendez-vous">Book Appointment</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    <!-- Column 3: Contact Info -->
-    <div class="footer-contact">
-      <h3>Contact Info</h3>
-      <address>
-        <p><strong>Address:</strong> Libenge Moke, Gemena, Democratic Republic of Congo</p>
-    
-      <p><strong>Phone:</strong> +243 813 621 661</p>
-
-      <p><strong>Email:</strong> <a href="mailto:info@modernclinic.com">info@modernclinic.com</a></p>
-      <p>Hours : Monday - Saturday, 8:00 AM - 8:00 PM</p>
-      </address>
     </div>
-  <!-- Column 4: Social Media -->
-    <div class="footer-social">
-      <h3>Follow Us</h3>
-      <ul>
-        <li><a href="https://www.facebook.com/modernclinicsomac" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-        <li><a href="https://twitter.com/modernclinicsomac" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-        <li><a href="https://www.instagram.com/modernclinicsomac" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/company/modernclinicsomac" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      </ul>
-    </div>
-  <!--Legal-->
-  <div class="footer-legal">
-    <h3>Legal</h3>
-    <ul>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms of Service</a></li>
-      <li> <a href="disclaimer.html">Medical Disclaimer</a></li>
-    </ul>
-    </div>  
-  <!-- Bottom Bar -->
-   <div class="footer-bottom">
-    <p>&copy; 2026 Modern Clinic SOMAC. All rights reserved.</p>
-  </div>
-</footer>
-<script src="js/script.js"></script>
+  </header>
 
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content" data-aos="fade-right">
+          <span class="eyebrow"><i class="fa-solid fa-heart-pulse"></i> Modern Clinic SOMAC</span>
+          <h1 data-fr="Des soins compatissants pour votre famille à Gemena">Compassionate Healthcare for Your Family in <span class="text-teal">Gemena</span></h1>
+          <p data-fr="Des soins médicaux accessibles et de qualité. Consultation générale, soins maternels et infantiles, laboratoire et pharmacie.">Providing accessible, quality medical care. General consultation, Maternal &amp; Child Care, Lab &amp; Pharmacy.</p>
+          <div class="hero__buttons">
+            <a href="#appointment" class="btn btn--teal btn--lg" data-fr="Prendre rendez-vous">Book Appointment</a>
+            <a href="#contact" class="btn btn--outline btn--lg" data-fr="Nous contacter">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="hero__media" data-aos="fade-left">
+          <div class="hero__img-wrap">
+            <!-- Replace with your own photo: images/hero.jpg -->
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80"
+                 alt="Doctor caring for a patient"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="hero__card">
+            <span class="hero__card-icon"><i class="fa-solid fa-user-doctor"></i></span>
+            <div>
+              <strong data-fr="Médecins experts">Expert Doctors</strong>
+              <small data-fr="Disponibles 24h/24">Available 24/7</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats" aria-label="Clinic statistics">
+      <div class="container stats__grid">
+        <div class="stat" data-aos="fade-up">
+          <i class="fa-solid fa-users"></i>
+          <h3><span class="counter" data-target="5000" data-suffix="+">0</span></h3>
+          <p data-fr="Patients">Patients</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-truck-medical"></i>
+          <h3><span class="counter" data-target="24" data-suffix="/7">0</span></h3>
+          <p data-fr="Urgences">Emergency</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-user-doctor"></i>
+          <h3><span class="counter" data-target="15" data-suffix="+">0</span></h3>
+          <p data-fr="Médecins">Doctors</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="300">
+          <i class="fa-solid fa-award"></i>
+          <h3><span class="counter" data-target="10" data-suffix="+">0</span></h3>
+          <p data-fr="Années d'expérience">Years</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div data-aos="fade-right">
+          <span class="eyebrow" data-fr="À propos de nous">About Us</span>
+          <h2 data-fr="Votre santé est notre priorité">Your health is our priority</h2>
+          <p data-fr="Modern Clinic SOMAC accompagne les familles de Gemena avec des soins humains, modernes et abordables, dans un environnement propre et sûr.">Modern Clinic SOMAC supports families in Gemena with caring, modern and affordable healthcare in a clean, safe environment.</p>
+          <ul class="checklist">
+            <li><i class="fa-solid fa-circle-check"></i> <span data-fr="Équipe médicale expérimentée">Experienced medical team</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-fr="Urgences ouvertes 24h/24">Emergency care open 24/7</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span data-fr="Soins accessibles pour toute la famille">Accessible care for the whole family</span></li>
+          </ul>
+        </div>
+        <div class="about__cards" data-aos="fade-left">
+          <article class="mini-card"><span>01</span><h4 data-fr="Soins centrés sur le patient">Patient-first care</h4></article>
+          <article class="mini-card"><span>02</span><h4 data-fr="Équipements modernes">Modern equipment</h4></article>
+          <article class="mini-card"><span>03</span><h4 data-fr="Prix transparents">Transparent pricing</h4></article>
+          <article class="mini-card"><span>04</span><h4 data-fr="Proche de chez vous">Close to home</h4></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section section--soft" id="services">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <span class="eyebrow" data-fr="Nos services">Our Services</span>
+          <h2 data-fr="Des soins complets sous un même toit">Complete care under one roof</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card service" data-aos="fade-up">
+            <span class="card__num">01</span>
+            <span class="service__icon"><i class="fa-solid fa-stethoscope"></i></span>
+            <h3 data-fr="Consultation générale">General Consultation</h3>
+            <p class="service__fr">Consultation générale</p>
+            <p data-fr="Soins de santé primaires">Primary care</p>
+            <a href="#appointment" class="link" data-service="General Consultation">Book now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="card service" data-aos="fade-up" data-aos-delay="100">
+            <span class="card__num">02</span>
+            <span class="service__icon"><i class="fa-solid fa-baby"></i></span>
+            <h3 data-fr="Soins maternels et infantiles">Maternal &amp; Child Care</h3>
+            <p class="service__fr">Soins maternels et infantiles</p>
+            <p data-fr="Prénatal, accouchement, pédiatrie">Prenatal, delivery, pediatric</p>
+            <a href="#appointment" class="link" data-service="Maternal & Child Care">Book now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="card service" data-aos="fade-up" data-aos-delay="200">
+            <span class="card__num">03</span>
+            <span class="service__icon"><i class="fa-solid fa-flask-vial"></i></span>
+            <h3 data-fr="Laboratoire et Pharmacie">Lab &amp; Pharmacy</h3>
+            <p class="service__fr">Laboratoire et Pharmacie</p>
+            <p data-fr="Diagnostics">Diagnostics</p>
+            <a href="#appointment" class="link" data-service="Lab & Pharmacy">Book now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DOCTORS ===== -->
+    <section class="section" id="doctors">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <span class="eyebrow" data-fr="Notre équipe">Our Team</span>
+          <h2 data-fr="Rencontrez nos médecins">Meet our doctors</h2>
+        </div>
+        <div class="grid grid--4">
+          <!-- Placeholder doctors: replace names and add real photos later -->
+          <article class="card doctor" data-aos="fade-up">
+            <div class="doctor__photo"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Dr. Name Surname</h3>
+            <p data-fr="Médecin généraliste">General Practitioner</p>
+            <a href="#appointment" class="btn btn--teal btn--sm" data-doctor="Dr. Name Surname (General Practitioner)" data-fr="Réserver">Book</a>
+          </article>
+          <article class="card doctor" data-aos="fade-up" data-aos-delay="100">
+            <div class="doctor__photo"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Dr. Name Surname</h3>
+            <p data-fr="Gynécologue-obstétricien">Obstetrician</p>
+            <a href="#appointment" class="btn btn--teal btn--sm" data-doctor="Dr. Name Surname (Obstetrician)" data-fr="Réserver">Book</a>
+          </article>
+          <article class="card doctor" data-aos="fade-up" data-aos-delay="200">
+            <div class="doctor__photo"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Dr. Name Surname</h3>
+            <p data-fr="Pédiatre">Pediatrician</p>
+            <a href="#appointment" class="btn btn--teal btn--sm" data-doctor="Dr. Name Surname (Pediatrician)" data-fr="Réserver">Book</a>
+          </article>
+          <article class="card doctor" data-aos="fade-up" data-aos-delay="300">
+            <div class="doctor__photo"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Dr. Name Surname</h3>
+            <p data-fr="Biologiste médical">Lab Specialist</p>
+            <a href="#appointment" class="btn btn--teal btn--sm" data-doctor="Dr. Name Surname (Lab Specialist)" data-fr="Réserver">Book</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APPOINTMENT ===== -->
+    <section class="section section--blue" id="appointment">
+      <div class="container appointment">
+        <div class="appointment__text" data-aos="fade-right">
+          <span class="eyebrow eyebrow--light" data-fr="Rendez-vous">Appointment</span>
+          <h2 data-fr="Réservez votre visite en quelques minutes">Book your visit in minutes</h2>
+          <p data-fr="Remplissez le formulaire : votre demande sera envoyée directement à notre équipe via WhatsApp.">Fill in the form and your request goes straight to our team on WhatsApp.</p>
+          <p class="appointment__phone"><i class="fa-brands fa-whatsapp"></i> +243 813 621 661</p>
+        </div>
+
+        <form class="form form--white" id="appointmentForm" novalidate data-aos="fade-left">
+          <div class="field">
+            <label for="name" data-fr="Nom complet">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="phone" data-fr="Téléphone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+243 ...">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="service" data-fr="Service">Service</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option>General Consultation</option>
+              <option>Maternal &amp; Child Care</option>
+              <option>Lab &amp; Pharmacy</option>
+            </select>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="date" data-fr="Date souhaitée">Preferred date</label>
+            <input type="date" id="date" name="date">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field field--full">
+            <label for="message" data-fr="Message (facultatif)">Message (optional)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Tell us how we can help"></textarea>
+          </div>
+          <button type="submit" class="btn btn--teal btn--lg field--full">
+            <i class="fa-brands fa-whatsapp"></i> <span data-fr="Envoyer via WhatsApp">Send via WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head" data-aos="fade-up">
+          <span class="eyebrow">Contact</span>
+          <h2 data-fr="Nous sommes là pour vous">We are here for you</h2>
+        </div>
+
+        <div class="contact">
+          <div class="contact__info" data-aos="fade-right">
+            <ul class="info-list">
+              <li><i class="fa-solid fa-location-dot"></i><div><strong data-fr="Adresse">Address</strong><span>Libenge Moke, Gemena, DRC</span></div></li>
+              <li><i class="fa-solid fa-phone"></i><div><strong data-fr="Téléphone">Phone</strong><a href="tel:+243813621661">+243 813 621 661</a></div></li>
+              <li><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><a href="mailto:info@modernclinic.com">info@modernclinic.com</a></div></li>
+              <li><i class="fa-regular fa-clock"></i><div><strong data-fr="Horaires">Hours</strong><span data-fr="Lun-Sam 8h-20h · Urgences 24h/24">Mon-Sat 8AM-8PM · Emergency 24/7</span></div></li>
+            </ul>
+            <div class="map">
+              <iframe title="Map of Modern Clinic SOMAC, Gemena"
+                src="https://maps.google.com/maps?q=Gemena%2C%20Democratic%20Republic%20of%20the%20Congo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <form class="form" id="contactForm" novalidate data-aos="fade-left">
+            <div class="field">
+              <label for="cName" data-fr="Nom">Name</label>
+              <input type="text" id="cName" placeholder="Your name">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="cEmail">Email</label>
+              <input type="email" id="cEmail" placeholder="you@example.com">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="cMessage">Message</label>
+              <textarea id="cMessage" rows="5" placeholder="How can we help?"></textarea>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <button type="submit" class="btn btn--blue btn--lg" data-fr="Envoyer le message">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <img src="./images/logo.png" alt="Modern Clinic SOMAC" class="footer__logo">
+        <p>Modern Clinic SOMAC - Your health is our priority</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://wa.me/243813621661" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home" data-fr="Accueil">Home</a></li>
+          <li><a href="#about" data-fr="À propos">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about" data-fr="Actualités">News</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 data-fr="Ressources">Resources</h4>
+        <ul>
+          <li><a href="#" data-fr="Politique de confidentialité">Privacy Policy</a></li>
+          <li><a href="#" data-fr="Conditions d'utilisation">Terms</a></li>
+          <li><a href="#" data-fr="Avertissement médical">Medical Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul class="footer__contact">
+          <li><i class="fa-solid fa-location-dot"></i> Libenge Moke, Gemena, DRC</li>
+          <li><i class="fa-solid fa-phone"></i> +243 813 621 661</li>
+          <li><i class="fa-solid fa-envelope"></i> info@modernclinic.com</li>
+        </ul>
+        <h4 class="newsletter__title">Restez informé</h4>
+        <form class="newsletter" id="newsletterForm" novalidate>
+          <label for="newsEmail" class="sr-only">Email</label>
+          <input type="email" id="newsEmail" placeholder="Votre email">
+          <button type="submit" class="btn btn--yellow">Subscribe</button>
+        </form>
+        <small class="error error--footer" id="newsError" aria-live="polite"></small>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">&copy; 2026 Modern Clinic SOMAC. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/243813621661" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
